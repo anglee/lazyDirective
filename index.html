@@ -2,13 +2,18 @@
 <html ng-app="myApp">
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
 </head>
 
 <body ng-controller="myCtrl">
     <h1>Hello {{name}}!</h1>
+    <output-display ng-repeat="a in as"></output-display>
+    <hr>
+    {{ a }}
+
+    <output-display></output-display>
 </body>
 
 </html>
