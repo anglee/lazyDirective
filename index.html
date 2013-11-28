@@ -5,15 +5,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular.js"></script>
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script src="modules/OutputDisplay.js"></script>
+    <script src="displays/ccc.js"></script>
 </head>
 
 <body ng-controller="myCtrl">
     <h1>Hello {{name}}!</h1>
-    <output-display ng-repeat="a in as"></output-display>
+    <output-display ng-repeat="o in outputs" type="{{o.type}}"></output-display>
     <hr>
+    <input ng-model="a.value"></input>
     {{ a }}
-
-    <output-display></output-display>
+    <output-display type="{{a.value}}"></output-display>
+    <output-display type="ccc"></output-display>
+    <output-display type="eee" model="a"></output-display>
 </body>
 
 </html>
