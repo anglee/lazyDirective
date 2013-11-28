@@ -36,7 +36,6 @@
 
         return {
             getOutputDisplay: function (name) {
-                console.log("getOutputDisplay", name);
                 return (name && displays[name]) ? displays[name] : displays.default;
             },
             get: function (index) {
@@ -73,7 +72,7 @@
         (function () {
             var ii = i;
             module.directive("output" + ii, function (outputDisplayFactory) {
-                console.log("directive output" + ii);
+                //console.log("directive output" + ii);
                 return outputDisplayFactory.get(ii);
             });
         })();
